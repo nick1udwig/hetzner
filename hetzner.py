@@ -92,7 +92,7 @@ class HetznerCloudManager:
             headers=self.headers
         )
 
-        self._check_response(response, [204])
+        self._check_response(response)
         return {"status": "deleted", "server_id": server_id}
 
     def list_servers(self) -> Dict[str, Any]:
